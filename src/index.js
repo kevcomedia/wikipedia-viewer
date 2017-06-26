@@ -5,3 +5,4 @@ if (process.env.NODE_ENV != 'production') {
 require('normalize.css');
 
 require('./search.js');
+require('./random.js');
