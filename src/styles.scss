@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather|Source+Sans+Pro');
+
+// General styles
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font: 16px/1.428em 'Source Sans Pro', sans-serif;
+}
+
+h1,
+h2 {
+  font-family: 'Merriweather', serif;
+  line-height: 1.428em;
+}
