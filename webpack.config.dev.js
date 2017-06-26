@@ -18,6 +18,10 @@ module.exports = {
         use: ['style-loader', 'css-loader', 'sass-loader']
       },
       {
+        test: /\.(eot|svg|ttf|woff(2)?)(\?v=\d+\.\d+\.\d+)?/,
+        use: 'url-loader'
+      },
+      {
         test: /\.html$/,
         use: 'raw-loader'
       },
