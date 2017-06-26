@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   devtool: 'cheap-eval-source-map',
 
-  entry: './src/index.js',
+  entry: ['babel-polyfill', './src/index.js'],
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dev')
@@ -23,8 +23,8 @@ module.exports = {
       },
       {
         test: /\.js$/,
-        loader: 'babel-loader',
-        include: path.resolve(__dirname, 'src')
+        include: path.resolve(__dirname, 'src'),
+        use: ['babel-loader', 'eslint-loader']
       }
     ]
   },
