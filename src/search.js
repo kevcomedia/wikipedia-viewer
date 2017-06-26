@@ -9,8 +9,7 @@ form.addEventListener('submit', function(event) {
 // TODO Name appropriately
 function *gen() {
   while (true) {  // eslint-disable-line
-    // TODO Replace with spinning icon
-    document.querySelector('#search-results').innerHTML = 'Loading...';
+    document.querySelector('#search-results').innerHTML = LoadingTemplate();
 
     const searchTerm = document.querySelector('#search-term').value;
     const searchResults = yield fetchWikipediaPages(searchTerm);
@@ -29,6 +28,13 @@ function ResultTemplate({title = '', excerpt = '', link = ''} = {}) {
   return `<div class="searchResults-result">
     <h2><a href="${link}" target="_blank">${title}</a></h2>
     <p>${excerpt}</p>
+  </div>`;
+}
+
+function LoadingTemplate() {
+  return `<div class="searchResults-loading">
+    <span class="fa fa-circle-o-notch fa-spin fa-5x fa-fw" aria-hidden="true">
+    </span>
   </div>`;
 }
 
