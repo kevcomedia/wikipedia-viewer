@@ -6,7 +6,8 @@
     "start": "npm run dev",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rm -rf ./dist; webpack --config webpack.config.prod.js",
-    "dev": "webpack-dev-server --config webpack.config.dev.js"
+    "dev": "webpack-dev-server --config webpack.config.dev.js",
+    "deploy": "surge --project ./dist --domain gckev-wikipedia-viewer.surge.sh"
   },
   "repository": {
     "type": "git",
@@ -42,7 +43,7 @@
   },
   "git": {
     "scripts": {
-      "pre-push": "npm run build; surge --project ./dist --domain gckev-wikipedia-viewer.surge.sh"
+      "pre-push": "if [[ `git rev-parse --abbrev-ref HEAD` == 'master' ]]; then npm run build && npm run deploy; fi"
     }
   }
 }
