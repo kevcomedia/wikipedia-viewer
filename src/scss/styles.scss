@@ -65,3 +65,8 @@ h2 {
     color: $linkColor;
   }
 }
+
+.searchResults-loading {
+  display: flex;
+  justify-content: center;
+}
