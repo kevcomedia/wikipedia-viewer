@@ -4,7 +4,7 @@ if (process.env.NODE_ENV != 'production') {
 
 require('normalize.css');
 require('font-awesome/css/font-awesome.css');
-require('./styles.scss');
+require('./scss/styles.scss');
 
-require('./search.js');
-require('./random.js');
+require('./js/search.js');
+require('./js/random.js');
