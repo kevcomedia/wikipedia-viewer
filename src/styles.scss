@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Merriweather|Source+Sans+Pro');
+@import 'palette';
 
 // General styles
 
@@ -9,6 +10,8 @@
 }
 
 body {
+  background-color: $pageBgColor;
+  color: $defaultColor;
   font: 16px/1.428em 'Source Sans Pro', sans-serif;
 }
 
@@ -16,4 +19,24 @@ h1,
 h2 {
   font-family: 'Merriweather', serif;
   line-height: 1.428em;
+}
+
+
+.controls {
+  button,
+  input {
+    color: $defaultColor;
+  }
+
+  h1 {
+    color: $mainHeadingColor;
+  }
+}
+
+.searchResults {
+  background-color: $resultsBgColor;
+
+  a {
+    color: $linkColor;
+  }
 }
