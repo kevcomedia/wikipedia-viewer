@@ -32,11 +32,38 @@ h2 {
 
   h1 {
     color: $mainHeadingColor;
+    text-align: center;
+  }
+}
+
+.controls-form {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  max-width: 31.25rem;
+  padding-bottom: 1.25rem;
+
+  input {
+    border: 1px solid darken($pageBgColor, 3%);
+    flex: 1 1 0;  // grow and shrink as needed
+    padding: .25rem;
+  }
+
+  button {
+    background-color: $resultsBgColor;
+    border: 1px solid darken($pageBgColor, 3%);
+    flex: 0 1 1.875rem; // don't grow, stay at 1.875rem but shrink when needed
+    padding: .5rem;
   }
 }
 
 .searchResults {
   background-color: $resultsBgColor;
+
+  // Prevent first h2 from leaking margin to contols section
+  h2:first-child {
+    margin-top: 0;
+  }
 
   a {
     color: $linkColor;
