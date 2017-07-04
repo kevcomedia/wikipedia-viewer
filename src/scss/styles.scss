@@ -59,7 +59,7 @@ h2 {
 
 .searchResults {
   background-color: $resultsBgColor;
-  padding: .75rem 3rem;
+  padding: 0;
 
   a {
     color: $linkColor;
@@ -69,4 +69,17 @@ h2 {
 .searchResults-loading {
   display: flex;
   justify-content: center;
+  padding: 1rem;
+}
+
+.searchResults-result {
+  padding: 1rem 2rem;
+
+  h2, {
+    margin: 0;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
 }
