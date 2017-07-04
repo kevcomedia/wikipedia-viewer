@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather|Source+Sans+Pro');
+@import 'palette';
+
+// General styles
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $pageBgColor;
+  color: $defaultColor;
+  font: 16px/1.428em 'Source Sans Pro', sans-serif;
+  margin: auto;
+  max-width: 62.5rem;
+}
+
+h1,
+h2 {
+  font-family: 'Merriweather', serif;
+  line-height: 1.428em;
+}
+
+
+.controls {
+  button,
+  input {
+    color: $defaultColor;
+  }
+
+  h1 {
+    color: $mainHeadingColor;
+    text-align: center;
+  }
+}
+
+.controls-form {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  max-width: 31.25rem;
+  padding-bottom: 1.25rem;
+
+  input {
+    border: 1px solid darken($pageBgColor, 3%);
+    flex: 1 1 0;  // grow and shrink as needed
+    padding: .25rem;
+  }
+
+  button {
+    background-color: $resultsBgColor;
+    border: 1px solid darken($pageBgColor, 3%);
+    flex: 0 1 1.875rem; // don't grow, stay at 1.875rem but shrink when needed
+    padding: .5rem;
+  }
+}
+
+.searchResults {
+  background-color: $resultsBgColor;
+  padding: 0;
+
+  a {
+    color: $linkColor;
+  }
+}
+
+.searchResults-loading {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.searchResults-result {
+  padding: 1rem 2rem;
+
+  h2, {
+    margin: 0;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+}
